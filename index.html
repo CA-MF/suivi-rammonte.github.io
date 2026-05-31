@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suivi Rammonte — Plateforme Pédagogique</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.sheetjs.com/xlsx-0.20.2/package/dist/xlsx.full.min.js"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- ====== LOGIN ====== -->
+<div id="login-page">
+  <div class="login-card">
+    <div class="login-logos">
+      <div class="logo-a">🌿</div>
+      <div class="logo-b" style="font-size:12px; font-weight:800; color:#2E7D64;">RAM</div>
+    </div>
+    <div class="login-title">Suivi Rammonte</div>
+    <div class="login-sub">Connectez-vous à votre compte</div>
+    <label class="fl">Nom d'utilisateur</label>
+    <input class="fi" id="inp-user" type="text" placeholder="Votre identifiant" />
+    <label class="fl">Mot de passe</label>
+    <input class="fi" id="inp-pass" type="password" placeholder="••••••••" />
+    <div id="login-err" class="ferr" style="display:none"></div>
+    <div id="firebase-status" style="text-align:center; font-size:11px; color:var(--text-muted); margin-bottom:8px; display:none;">
+      🔄 Connexion au serveur en cours...
+    </div>
+    <button class="btn-login" id="btn-login">Se connecter →</button>
+    <div class="login-foot">
+      <p>Programme Rammonte 2026</p>
+      <p>Médina Fall Moustarchidine Junior</p>
+    </div>
+  </div>
+</div>
+
+<!-- ====== APP ====== -->
+<div id="app-page">
+  <div class="app-header">
+    <div class="hdr-top">
+      <div class="hdr-logos"><div class="hlg"></div><div class="hlg"></div></div>
+      <div class="hdr-title" style="font-size:30px; font-family:'Times New Roman', Times, serif; font-weight:bold;">Plateforme Suivi Rammonte</div>
+      <div class="hdr-user"><div class="avatar" id="header-avatar">--</div><span class="uname" id="header-name">--</span></div>
+    </div>
+    <div class="nav-tabs" id="nav-tabs-original"></div>
+    <div id="sub-tabs-container" style="display: none;"></div>
+  </div>
+  <div class="app-body" id="app-body-container"></div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
