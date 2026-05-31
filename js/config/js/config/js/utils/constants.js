@@ -1,0 +1,47 @@
+// ========== DONNÉES PRINCIPALES ==========
+export let classesList = [];
+export let pensionnairesList = [];
+export let programmesData = {};
+export let attendanceRecords = [];
+export let alertThreshold = 3;
+export let currentUser = null;
+export let currentEvalClass = '';
+export let currentDashboardClass = '';
+export let currentProgramClass = '';
+export let currentProgressionClass = '';
+export let appDataSubjects = ['Coran', 'Tajwid', 'Hadith', 'Akhlaq', 'Fiqh', 'Arabe', 'Éducation Islamique'];
+export let charts = {};
+export let programChart = null;
+export let absenceChart = null;
+export let classesDetails = {};
+export let classSubjects = {};
+export let rapportsList = [];
+export let cipsMembersList = [];
+export let cipsAttendanceRecords = [];
+export let allUsersList = [];
+export let customLogos = { logo1: '', logo2: '' };
+export let savedAttendanceMonth = new Date().getMonth();
+export let savedAttendanceYear = new Date().getFullYear();
+export let refreshTimeout = null;
+export let isRefreshing = false;
+export let sortOrderAZ = true;
+export let unsubscribeFunctions = [];
+
+// ========== SETTERS ==========
+export function setClassesList(data) { classesList = data; }
+export function setPensionnairesList(data) { pensionnairesList = data; }
+export function setProgrammesData(data) { programmesData = data; }
+export function setAttendanceRecords(data) { attendanceRecords = data; }
+export function setCurrentUser(user) { currentUser = user; }
+export function setCurrentEvalClass(classId) { currentEvalClass = classId; }
+export function setCurrentDashboardClass(classId) { currentDashboardClass = classId; }
+export function setCurrentProgramClass(classId) { currentProgramClass = classId; }
+export function setCurrentProgressionClass(classId) { currentProgressionClass = classId; }
+export function setClassesDetails(data) { classesDetails = data; }
+export function setClassSubjects(data) { classSubjects = data; }
+export function setRapportsList(data) { rapportsList = data; }
+export function setCipsMembersList(data) { cipsMembersList = data; }
+export function setCipsAttendanceRecords(data) { cipsAttendanceRecords = data; }
+export function setAllUsersList(data) { allUsersList = data; }
+export function setCustomLogos(data) { customLogos = data; }
+export function setUnsubscribeFunctions(data) { unsubscribeFunctions = data; }
